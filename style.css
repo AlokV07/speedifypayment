@@ -1,0 +1,3884 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Baloo 2", cursive;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/**************************HEADER*******************/
+
+header {
+  /* border: 2px solid red; */
+  position: fixed;
+  width: 100%;
+  height: 90px;
+  left: 0;
+  top: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+header .logo {
+  height: 80px;
+}
+
+header img.logo {
+  margin-left: 100%;
+  border-radius: 50%;
+}
+
+header .navbar {
+  /* border: 2px solid red; */
+  margin-right: 5%;
+}
+
+header .navbar ul {
+  list-style: none;
+}
+
+header .navbar ul li {
+  position: relative;
+  float: left;
+}
+
+header .navbar ul li a {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 20px;
+  color: black;
+  display: block;
+  text-decoration: none;
+}
+
+header .navbar ul li a:hover {
+  color: rgb(124, 124, 214);
+  transition: all 0.3s ease;
+  transform: translateY(-3px);
+}
+
+header .navbar ul li ul {
+  position: absolute;
+  left: 0;
+  width: 250px;
+  border-radius: 20px;
+  background-color: rgb(237, 237, 237);
+  display: none;
+}
+
+header .navbar ul li ul li {
+  width: 80%;
+  height: 50px;
+  line-height: 1;
+}
+
+header .navbar ul li ul li:hover {
+  transition: all 0.3s ease;
+  transform: translateX(20px);
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+  display: initial;
+}
+
+#menu-bar {
+  display: none;
+}
+
+header label {
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+
+  header {
+    padding: 20px;
+  }
+  header label {
+    display: initial;
+  }
+  header .navbar {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    right: 50%;
+    background: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  header .navbar ul li {
+    width: 100%;
+  }
+  header .navbar ul li ul {
+    position: relative;
+    width: 100%;
+  }
+  header .navbar ul li ul li {
+    background: white;
+  }
+  header .navbar ul li ul li ul {
+    width: 100%;
+    left: 0;
+  }
+  #menu-bar:checked ~ .navbar {
+    display: block;
+  }
+}
+
+/****************** home section ***************/
+
+.home img {
+  margin-top: 5.7%;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.slider a {
+  cursor: pointer;
+  width: 100%;
+}
+
+.slider-wrapper {
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+
+.slider-wrapper img {
+  width: 100%;
+  height: 500px;
+  margin-top: 5.7%;
+  object-fit: cover;
+}
+
+.slide {
+  float: left;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 3s linear;
+}
+
+.slider-wrapper a > .slide:first-child {
+  opacity: 1;
+}
+
+/******************** Service Section *****************/
+
+div.services h1 {
+  text-align: center;
+  padding: 20px 0;
+  font-weight: bold;
+  color: rgb(124, 124, 214);
+}
+
+.servicebox {
+  display: flex;
+}
+
+.serviceboxes {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 40vh;
+  border-radius: 10px;
+  margin: 0 10px;
+  background-color: rgb(124, 124, 214);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.serviceboxes:hover {
+  transform: scale(1.1);
+}
+
+.serviceboxes img {
+  width: 80px;
+  height: 80px;
+  margin-top: 8%;
+  /* border: 2px solid red; */
+}
+
+.serviceboxes h2 {
+  margin: 30px 0 0 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color:  rgb(42, 42, 113);
+}
+
+.serviceboxes h3 {
+  color: rgb(185, 4, 4);
+}
+
+.services a {
+  text-decoration: none;
+}
+
+a.serviceboxesanchor {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  background-color: rgb(124, 124, 214);
+  border-radius: 20px;
+  padding: 5px 25px;
+  margin: 10px 0 0 0;
+  /* border: 2px solid red; */
+}
+
+/*************************** Investment Section  ******************/
+
+.investment {
+  margin: 20px 0 0 0;
+  background-color: rgb(48, 48, 124);
+}
+
+.investmentsection {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.investmentsectionimg {
+  margin: 30px;
+}
+
+.investmentsectionimg img {
+  /* margin:0 40px 0 0; */
+}
+
+.investmentsectioncontent {
+  width: 40%;
+  margin-left: 150px;
+  /* height: 50vh; */
+  /* border: 2px solid red; */
+}
+
+.investmentsectioncontent h2 {
+  color: rgb(124, 124, 214);
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.investmentsectioncontent h5 {
+  font-size: 20px;
+  font-weight: normal;
+  color: white;
+}
+
+.investmentsectioncontent h5 span {
+  font-size: 20px;
+  color: rgb(124, 124, 214);
+  font-weight: bold;
+}
+
+.investmentpoints {
+  /* border: 2px solid red; */
+  margin: 30px 0;
+}
+
+.investmentpoints p {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.investmentpoints i {
+  color: rgb(124, 124, 214);
+  margin: 0 10px 0 0;
+}
+
+.investmentsectioncontent a {
+  padding: 5px 20px;
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(124, 124, 214);
+}
+
+.investmentsectioncontent a i:hover {
+  transition: all 0.5s ease;
+  transform: translateX(5px);
+}
+
+/*************************** Insurance Section  ******************/
+
+.insurance {
+  margin: 20px 0 0 0;
+}
+
+.insurancesection {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.insurancesectionimg {
+  margin: 30px;
+}
+
+.insurancesectionimg img {
+  margin: 0 0 0 100px;
+}
+
+.insurancesectioncontent {
+  width: 40%;
+
+  /* border: 2px solid red; */
+}
+
+.insurancesectioncontent h2 {
+  color: rgb(124, 124, 214);
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.insurancesectioncontent h5 {
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.insurancesectioncontent h5 span {
+  font-size: 25px;
+  color: rgb(124, 124, 214);
+  font-weight: bold;
+}
+
+.insurancepoints {
+  /* border: 2px solid red; */
+  margin: 30px 0;
+}
+
+.insurancepoints p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.insurancepoints i {
+  color: rgb(124, 124, 214);
+  margin: 0 10px 0 0;
+}
+
+.insurancesectioncontent a {
+  padding: 5px 20px;
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(124, 124, 214);
+}
+
+.insurancesectioncontent a i:hover {
+  transition: all 0.5s ease;
+  transform: translateX(5px);
+}
+
+.insuranceblock {
+  display: flex;
+  align-items: center;
+  margin: 30px 0 80px 0;
+}
+
+.insuranceblockbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  height: 40vh;
+  border-radius: 20px;
+  margin: 0 30px;
+  background-color: rgb(124, 124, 214);
+  cursor: pointer;
+}
+
+.insuranceblockbox:hover {
+  transition: all 2s ease-in;
+  transform: rotate(360deg);
+}
+
+.insuranceblockbox img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.insuranceblockbox h2 {
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+.insuranceblockbox p {
+  color: white;
+  text-align: center;
+  width: 80%;
+  font-size: 18px;
+  margin: 20px 0 0 0;
+}
+
+/*************************** Business Section Start ********************/
+
+.businesscalculation {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 80px;
+}
+
+.businesscalculationbox h2 {
+  font-weight: bold;
+  margin-left: 30%;
+}
+
+.businesscalculationbox h2 span {
+  color: rgb(124, 124, 214);
+}
+
+.businesscalculationbox p {
+  font-size: 18px;
+  margin-top: 10%;
+}
+
+/************************** Footer section start **************************/
+
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(48, 48, 124);
+  /* background-color: black; */
+  width: 100%;
+  height: 400px;
+}
+
+.footerlogosectionpara {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 20%;
+}
+
+.footerlogosection {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footerlogosectionpara img.logo {
+  /* width: 100px; */
+  height: 150px;
+  /* border-radius: 50%; */
+  margin: -50px 0 10% 0;
+}
+.footerlogosectionpara p {
+  font-size: 14px;
+  /* width: 30%; */
+  color: rgb(124, 124, 214);
+}
+.footerlogosection p {
+  font-size: 20px;
+  color: rgb(124, 124, 214);
+}
+
+.footerlogosection img {
+  width: 150px;
+  height: 60px;
+}
+
+.footerlogosection span {
+  color: rgb(124, 124, 214);
+  font-size: 25px;
+  font-weight: bold;
+  margin: 5% 0;
+}
+
+.footerlogosectionconnection {
+  font-size: 25px;
+  width: 80%;
+  /* border: 2px solid red; */
+}
+
+.footerlogosectionconnection i {
+  margin: 0 5%;
+  color: black;
+}
+
+.footerlogosectionconnection i:hover {
+  color: rgb(124, 124, 214);
+  transition: all 0.3s ease;
+  transform: translateY(-3px);
+}
+
+.footerservicesection {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerservicesection h4 {
+  font-weight: bold;
+  color: rgb(124, 124, 214);
+}
+
+.footerservicesection a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: initial;
+  line-height: 2rem;
+}
+
+.footerservicesection a:hover {
+  color: rgb(124, 124, 214);
+  font-weight: bold;
+}
+
+.footerservicesectionsecond {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  margin-top: -10%;
+}
+.footerservicesectionsecond h4 {
+  font-weight: bold;
+  color: rgb(124, 124, 214);
+}
+
+.footerservicesectionsecond a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: initial;
+  line-height: 2rem;
+}
+
+#footercompany{
+margin-top: -12%;
+}
+
+.footerservicesectionsecond a:hover {
+  color: rgb(124, 124, 214);
+  font-weight: bold;
+}
+
+.footerdisclaimer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(124, 124, 214);
+  color: white;
+}
+
+.footerdisclaimercopy {
+  margin-top: 1%;
+}
+
+.footerdisclaimercondition {
+  width: 40%;
+}
+
+.footerdisclaimercondition a {
+  color: white;
+  text-decoration: none;
+  margin: 0 2%;
+}
+
+.footerdisclaimercondition a:hover {
+  color: black;
+  font-weight: bold;
+}
+
+/************************* Payment Page Section Start **********************/
+
+.paymentsContainer {
+  /* border: 2px solid red; */
+  width: 80%;
+  box-shadow: 2px 5px 10px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5% 10%;
+  height: 60vh;
+  transition: all 0.5s ease;
+}
+
+.paymentsContainer:hover {
+  transform: scale(1.05);
+}
+
+.paymentsectionfirstimg {
+  margin: 0 7%;
+  height: 100%;
+}
+
+.paymentsectionfirstimg img {
+  width: 300px;
+  height: 300px;
+  transition: all 0.3s ease;
+}
+
+.paymentsectionfirstimg img:hover {
+  transform: scale(1.1);
+}
+
+.paymentbill {
+  /* border: 2px solid red; */
+  margin: 0 5%;
+}
+
+.paymentbill h2 {
+  font-size: 35px;
+  color: rgb(124, 124, 214);
+  font-weight: bold;
+  margin: 3% 0;
+}
+
+.paymentbill h5 {
+  font-size: 20px;
+  margin: 3% 0;
+}
+
+.paymentbillpoint p i {
+  color: rgb(124, 124, 214);
+  margin-right: 3%;
+}
+
+.paymentmiddlecontent h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.paymentsContainersecond {
+  /* border: 2px solid red; */
+  width: 80%;
+  box-shadow: 2px 5px 10px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5% 10%;
+  transition: all 0.5s ease;
+}
+
+.paymentsContainersecond:hover {
+  transform: scale(1.1);
+}
+
+.paymentsectionsecondimg img {
+  transition: all 0.3s ease;
+}
+
+.paymentsectionsecondimg img:hover {
+  transform: scale(1.1);
+}
+
+.paymentbillsecond {
+  /* border: 2px solid red; */
+  margin: 0 5%;
+}
+
+.paymentbillsecond h2 {
+  font-size: 35px;
+  color: rgb(124, 124, 214);
+  font-weight: bold;
+  margin: 3% 0;
+}
+
+.paymentbillsecond h5 {
+  font-size: 20px;
+  margin: 3% 0;
+  font-weight: bold;
+}
+
+.paymentbillsecond p i {
+  color: rgb(124, 124, 214);
+  margin-right: 3%;
+}
+
+/**************************** Recharge Bill payment section *************************/
+
+.rechargecontent {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 5% 0;
+}
+
+.rechargemainimg img {
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.rechargemainimg img:hover {
+  transform: scale(1.1);
+}
+
+.rechargemaincontent {
+  width: 35%;
+}
+
+.rechargemaincontent h1 span {
+  color: rgb(124, 124, 214);
+  font-weight: bold;
+}
+
+.rechargemaincontent h1 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.rechargemaincontent p {
+  font-size: 17px;
+}
+
+.rechargefeature h1 {
+  text-align: center;
+  font-weight: bold;
+  margin: 5% 0;
+}
+
+.rechargeretailerfeedback {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.rechargeretailerfeedback h1 span {
+  color: rgb(124, 124, 214);
+}
+
+.rechargeretailerfeedback h1 {
+  font-weight: bold;
+}
+
+.reviewcustomer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin: 2% 0;
+  /* border: 2px solid red; */
+}
+
+.retailerpic {
+  /* border: 2px solid red; */
+  text-align: center;
+  margin: 2% 2%;
+}
+
+.reviewcustomer .retailerpic img {
+  width: 50px;
+  height: 50px;
+}
+
+.retailerpic h3 {
+  color: rgb(124, 124, 214);
+  margin: 5% 0;
+}
+
+.rechargefaq {
+  /* border: 2px solid red; */
+  margin: 5% 15%;
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 20px 10px;
+}
+
+.rechargefaq details {
+  margin: 2% 5%;
+}
+
+.rechargefaq h1 {
+  font-size: 4vw;
+  margin: 2% 5%;
+}
+
+.rechargefaq summary {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.rechargefaq p {
+  font-size: 18px;
+  color: rgb(124, 124, 214);
+  width: 80%;
+  margin: 2%;
+}
+
+/************************* About Section Start *********************/
+
+.aboutjourney {
+  background-color: rgb(120, 120, 177);
+  height: 80vh;
+}
+
+.aboutjourney h1 {
+  text-align: center;
+  font-weight: bold;
+  padding: 30px;
+}
+
+.swiper {
+  width: 60%;
+  height: 60%;
+  border-radius: 20px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.swiper-slide p {
+  width: 60%;
+}
+
+.aboutbusiness {
+  background: linear-gradient(
+    90deg,
+    rgb(65, 65, 251),
+    #6363ae,
+    rgb(56, 56, 143)
+  );
+}
+
+.businesscontent {
+  text-align: center;
+  padding: 30px;
+  color: white;
+}
+
+.businesscontentbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 0 0 0 12%;
+}
+
+.businessboxcontent {
+  width: 70%;
+}
+
+.businessboxcontent h1 {
+  color: rgb(48, 48, 198);
+  font-weight: bold;
+}
+
+.businessbox1 {
+  display: flex;
+  /* border: 2px solid red; */
+  padding: 20px;
+  margin-right: 5%;
+}
+
+.businessbox1 i.box1 {
+  font-size: 50px;
+  height: 50%;
+  margin: 15% 10%;
+}
+
+.businessbox1 i {
+  /* border: 2px solid red; */
+  font-size: 40px;
+  height: 50%;
+  margin: 5% 5%;
+  color: white;
+}
+
+.businesscontentboxsecond {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 0 0 0 15%;
+}
+
+.businessboxcontentsecond {
+  margin-left: 10%;
+}
+
+.businessbox2 {
+  display: flex;
+  /* border: 2px solid red; */
+  padding: 20px;
+  width: 70%;
+  margin-right: 5%;
+}
+
+.businessboxcontentsecond h1 {
+  color: rgb(48, 48, 198);
+  font-weight: bold;
+}
+
+.businessbox2 i.box1 {
+  font-size: 50px;
+  height: 50%;
+  margin: 15% 10%;
+}
+
+.businessbox2 i {
+  /* border: 2px solid red; */
+  font-size: 50px;
+  height: 50%;
+  margin: 5% 0;
+  color: white;
+}
+
+/************************* Contact Section Start *********************/
+
+.contactbgimg {
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0.8;
+  position: absolute;
+  right: 0;
+  top: 80%;
+  z-index: -1;
+  width: 100%;
+  height: 90vh;
+}
+
+.container {
+  width: 60%;
+}
+
+form input,
+select,
+option,
+textarea {
+  background: transparent !important;
+}
+
+.contactaddresspage {
+  position: relative;
+  margin: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.contactaddresscontent {
+  /* border: 2px solid red; */
+  width: 50%;
+}
+
+.contactcontact {
+  display: flex;
+  align-items: center;
+}
+
+.contactcontact i {
+  font-size: 30px;
+  padding: 40px;
+  color: rgb(128, 0, 255);
+}
+
+.contacthead h3 {
+  font-weight: bold;
+  margin: 3% 0;
+}
+
+.contacthead h5 {
+  width: 80%;
+}
+
+.contactaddressimg img {
+  width: 100%;
+  height: 60vh;
+}
+
+.contactmap {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  margin: 0 0 3% 0;
+}
+
+.contactmapaddress {
+  /* border: 2px solid red; */
+  margin: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.contactmapaddress:hover {
+  border-radius: 10px;
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contactmapaddress i {
+  font-size: 40px;
+  margin-bottom: 3%;
+  color: green;
+}
+
+.contactmapaddress h5 {
+  color: grey;
+}
+
+.contactmapaddress button {
+  padding: 10px 30px;
+  border-radius: 10px;
+  margin: 3% 0;
+  border: none;
+  background-color: black;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.contactmapaddress button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid grey;
+}
+
+/*************************** Policies SECTION START ***************/
+
+.kyccontainer {
+  /* border: 2px solid red; */
+  margin: 8% 10%;
+  width: 80%;
+}
+
+.kyccontainer h1 {
+  color: rgb(124, 124, 214);
+  font-weight: bold;
+  width: 80%;
+}
+
+.kyccontainer h1 span {
+  color: black;
+  font-weight: bold;
+}
+
+.kyccontainer summary {
+  font-size: 20px;
+}
+
+/************************************ RESPONSIVE SECTION *************************/
+
+/************************************ RESPONSIVE HOME SECTION *************************/
+
+@media screen and (min-width: 350px) and (max-width: 400px) {
+  /************* header section start ***********/
+
+  header {
+    height: 80px;
+  }
+
+  header .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  header img.logo {
+    margin-left: 10%;
+  }
+
+  /********** slider or banner responsive ******/
+
+  .home img {
+    height: 300px;
+  }
+
+  .slider-wrapper {
+    height: 350px;
+  }
+
+  .slider-wrapper img {
+    height: 300px;
+    object-fit: fill;
+    margin-top: 10%;
+  }
+
+  /************** Service section start ************/
+
+  div.services h1 {
+    text-align: center;
+    padding: 20px 0;
+    font-weight: bold;
+    color: rgb(124, 124, 214);
+  }
+
+  .servicebox {
+    display: block;
+  }
+
+  .serviceboxes {
+    /* border: 2px solid red; */
+    width: 80%;
+    height: 35vh;
+    border-radius: 10px;
+    margin: 10px 40px;
+  }
+
+  .serviceboxes:hover {
+    transform: scale(1.1);
+  }
+
+  .serviceboxes img {
+    width: 60px;
+    height: 60px;
+    margin-top: 8%;
+    /* border: 2px solid red; */
+  }
+
+  .serviceboxes h2 {
+    font-size: 20px;
+  }
+
+  .services a {
+    text-decoration: none;
+  }
+
+  a.serviceboxesanchor {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    background-color: rgb(124, 124, 214);
+    border-radius: 20px;
+    padding: 5px 25px;
+    margin: 10px 0 0 0;
+    /* border: 2px solid red; */
+  }
+
+  /**************** Investment section start ***********/
+
+  .investment {
+    height: 520px;
+  }
+
+  .investmentsection {
+    display: block;
+    margin-left: 10px;
+  }
+
+  .investmentsectionimg img {
+    margin-top: 10px;
+    margin-left: 10%;
+    width: 200px;
+    height: 200px;
+  }
+
+  .investmentsectioncontent {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .investmentsectioncontent h2 {
+    font-size: 25px;
+  }
+
+  .investmentsectioncontent h5 {
+    font-size: 16px;
+  }
+
+  .investmentsectioncontent h5 span {
+    font-size: 16px;
+  }
+
+  .investmentpoints {
+    /* border: 2px solid red; */
+    margin: 15px 0;
+  }
+
+  .investmentpoints p {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .investmentpoints i {
+    margin: 0 5px 0 0;
+  }
+
+  .investmentsectioncontent a {
+    padding: 0px 10px;
+    border-radius: 10px;
+  }
+
+  /*************** INSURANCE Section Start ************/
+
+  .insurance {
+    margin: 20px 0 0 10px;
+    /* border: 2px solid red; */
+  }
+
+  .insurancesection {
+    display: block;
+  }
+
+  .insurancesectionimg img {
+    margin: 0 0 0 20px;
+  }
+
+  .insurancesectioncontent {
+    width: 100%;
+  }
+
+  .insurancesectioncontent h2 {
+    margin-top: 10px;
+    font-size: 25px;
+    /* border: 2px solid red; */
+  }
+
+  .insurancesectioncontent h5 {
+    font-size: 18px;
+    /* border: 2px solid red; */
+  }
+
+  .insurancesectioncontent h5 span {
+    font-size: 18px;
+  }
+
+  .insurancepoints {
+    /* border: 2px solid red; */
+    margin: 20px 0;
+  }
+
+  .insurancepoints p {
+    font-size: 16px;
+  }
+
+  .insurancepoints i {
+    color: rgb(124, 124, 214);
+    margin: 0 5px 0 0;
+  }
+
+  .insurancesectioncontent a {
+    padding: 0px 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+  }
+
+  .insurancesectionimg img {
+    width: 150px;
+    height: 250px;
+  }
+
+  .insuranceblock {
+    display: block;
+    margin: 20px 0 50px 0;
+  }
+
+  .insuranceblockbox {
+    width: 80%;
+    height: 35vh;
+    border-radius: 10px;
+    margin: 15px 30px;
+    /* border: 2px solid red; */
+  }
+
+  .insuranceblockbox img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .insuranceblockbox h2 {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+  }
+
+  /************** Business section start **********/
+
+  .businesscalculation {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+
+  .businesscalculationbox h2 {
+    font-weight: normal;
+    font-size: 20px;
+    margin-left: 10%;
+  }
+
+  .businesscalculationbox h2 span {
+    color: rgb(124, 124, 214);
+  }
+
+  .businesscalculationbox p {
+    font-size: 12px;
+    width: 90%;
+    /* border: 2px solid red; */
+    margin: 2%;
+  }
+
+  /***************** Footer section start **************/
+
+  .footerlogosectionpara {
+    display: none;
+  }
+
+  .footerlogosection {
+    position: absolute;
+    /* border: 2px solid red; */
+    margin: 30% 0 0 10%;
+    width: 40%;
+  }
+
+  .footerlogosection p {
+    font-size: 16px;
+  }
+
+  .footerlogosection img {
+    width: 90px;
+    height: 30px;
+  }
+
+  .footerlogosection span {
+    color: rgb(124, 124, 214);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5% 0;
+  }
+
+  .footerlogosectionconnection {
+    font-size: 16px;
+    width: 50%;
+    margin-left: 5%;
+    /* border: 2px solid red; */
+  }
+
+  .footerlogosectionconnection i {
+    margin: 0 5%;
+    color: black;
+  }
+
+  .footerservicesection {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    margin-top: -24%;
+    margin-left: -3%;
+    width: 100px;
+  }
+
+  .footerservicesection h4 {
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  .footerservicesection a {
+    font-size: 8px;
+    /* border: 2px solid red; */
+    width: 100px;
+    line-height: 1.5rem;
+  }
+
+  .footerservicesectionsecond {
+    display: flex;
+    flex-direction: column;
+    margin: -55% 0 0 -5%;
+    width: 50px;
+    /* border: 2px solid red; */
+  }
+
+  div#footerpolicies.footerservicesectionsecond {
+    margin-top: -47%;
+  }
+
+  #footercompany {
+    margin-top: -60%;
+  }
+
+  .footerservicesectionsecond h4 {
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  .footerservicesectionsecond a {
+    font-size: 8px;
+    width: 60px;
+    line-height: 1.5rem;
+  }
+
+  .footerdisclaimercopy {
+    margin-top: 1%;
+  }
+
+  .footerdisclaimercondition {
+    width: 40%;
+  }
+
+  .footerdisclaimercondition a {
+    color: white;
+    text-decoration: none;
+    margin: 0 2%;
+  }
+
+  .footerdisclaimercondition a:hover {
+    color: black;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 609px) {
+  /************* header section start ***********/
+
+  header {
+    /* border: 2px solid red; */
+    height: 80px;
+  }
+
+  header .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  header img.logo {
+    margin-left: 10%;
+  }
+
+  /********** slider or banner responsive ******/
+
+  .home img {
+    height: 300px;
+  }
+
+  .slider-wrapper {
+    height: 350px;
+  }
+
+  .slider-wrapper img {
+    height: 300px;
+    object-fit: fill;
+    margin-top: 10%;
+  }
+
+  /************** Service section start ************/
+
+  div.services h1 {
+    padding: 30px 0;
+  }
+
+  .servicebox {
+    display: block;
+  }
+
+  .serviceboxes {
+    /* border: 2px solid red; */
+    width: 60%;
+    height: 40vh;
+    border-radius: 10px;
+    margin: 5% 20%;
+  }
+
+  .serviceboxes:hover {
+    transform: scale(1.1);
+  }
+
+  .serviceboxes img {
+    width: 70px;
+    height: 70px;
+    margin-top: 8%;
+    /* border: 2px solid red; */
+  }
+
+  .serviceboxes h2 {
+    font-size: 20px;
+  }
+
+  .services a {
+    text-decoration: none;
+  }
+
+  a.serviceboxesanchor {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    background-color: rgb(124, 124, 214);
+    border-radius: 20px;
+    padding: 5px 25px;
+    margin: 10px 0 0 0;
+    /* border: 2px solid red; */
+  }
+
+  /**************** Investment section start ***********/
+
+  .investment {
+    height: 550px;
+  }
+
+  .investmentsection {
+    display: block;
+    margin-left: 10px;
+  }
+
+  .investmentsectionimg img {
+    margin-top: 10px;
+    margin-left: 15%;
+    width: 250px;
+    height: 220px;
+  }
+
+  .investmentsectioncontent {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  .investmentsectioncontent h2 {
+    font-size: 25px;
+  }
+
+  .investmentsectioncontent h5 {
+    font-size: 16px;
+  }
+
+  .investmentsectioncontent h5 span {
+    font-size: 16px;
+  }
+
+  .investmentpoints {
+    /* border: 2px solid red; */
+    margin: 15px 0;
+  }
+
+  .investmentpoints p {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .investmentpoints i {
+    margin: 0 5px 0 0;
+  }
+
+  .investmentsectioncontent a {
+    padding: 0px 10px;
+    border-radius: 10px;
+  }
+
+  /*************** INSURANCE Section Start ************/
+
+  .insurance {
+    margin: 20px 0 0 10px;
+    /* border: 2px solid red; */
+  }
+
+  .insurancesection {
+    display: block;
+  }
+
+  .insurancesectionimg img {
+    margin: 0 0 0 25%;
+  }
+
+  .insurancesectioncontent {
+    width: 100%;
+  }
+
+  .insurancesectioncontent h2 {
+    margin-top: 10px;
+    font-size: 25px;
+    /* border: 2px solid red; */
+  }
+
+  .insurancesectioncontent h5 {
+    font-size: 18px;
+  }
+
+  .insurancesectioncontent h5 span {
+    font-size: 18px;
+  }
+
+  .insurancepoints {
+    /* border: 2px solid red; */
+    margin: 20px 0;
+  }
+
+  .insurancepoints p {
+    font-size: 16px;
+  }
+
+  .insurancepoints i {
+    color: rgb(124, 124, 214);
+    margin: 0 5px 0 0;
+  }
+
+  .insurancesectioncontent a {
+    padding: 0px 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+  }
+
+  .insurancesectionimg img {
+    width: 150px;
+    height: 250px;
+  }
+
+  .insuranceblock {
+    display: block;
+    margin: 20px 0 50px 0;
+  }
+
+  .insuranceblockbox {
+    width: 80%;
+    height: 35vh;
+    border-radius: 10px;
+    margin: 15px 10%;
+    /* border: 2px solid red; */
+  }
+
+  .insuranceblockbox img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .insuranceblockbox h2 {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+  }
+
+  /************** Business section start **********/
+
+  .businesscalculation {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+
+  .businesscalculationbox h2 {
+    font-weight: normal;
+    font-size: 20px;
+    margin-left: 10%;
+  }
+
+  .businesscalculationbox h2 span {
+    color: rgb(124, 124, 214);
+  }
+
+  .businesscalculationbox p {
+    font-size: 12px;
+    width: 90%;
+    /* border: 2px solid red; */
+    margin: 2%;
+  }
+
+  /***************** Footer section start **************/
+
+  .footerlogosectionpara {
+    display: none;
+  }
+
+  .footerlogosection {
+    position: absolute;
+    /* border: 2px solid red; */
+    margin: 10% 0 0 10%;
+    width: 40%;
+  }
+
+  .footerlogosection p {
+    font-size: 16px;
+  }
+
+  .footerlogosection img {
+    width: 90px;
+    height: 30px;
+  }
+
+  .footerlogosection span {
+    color: rgb(124, 124, 214);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5% 0;
+  }
+
+  .footerlogosectionconnection {
+    font-size: 16px;
+    width: 50%;
+    margin-left: 5%;
+    /* border: 2px solid red; */
+  }
+
+  .footerlogosectionconnection i {
+    margin: 0 5%;
+    color: black;
+  }
+
+  .footerservicesection {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    margin-top: -20%;
+    margin-left: -3%;
+    width: 100px;
+  }
+
+  .footerservicesection h4 {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  .footerservicesection a {
+    font-size: 8px;
+    /* border: 2px solid red; */
+    width: 100px;
+    line-height: 1.5rem;
+  }
+
+  .footerservicesectionsecond {
+    display: flex;
+    flex-direction: column;
+    margin: -45% 0 0 -5%;
+    width: 50px;
+    /* border: 2px solid red; */
+  }
+
+  div#footerpolicies.footerservicesectionsecond {
+    margin-top: -40%;
+  }
+
+  #footercompany {
+    margin-top: -50%;
+  }
+
+  .footerservicesectionsecond h4 {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  .footerservicesectionsecond a {
+    font-size: 8px;
+    width: 60px;
+    line-height: 1.5rem;
+  }
+
+  .footerdisclaimercopy {
+    margin-top: 1%;
+  }
+
+  .footerdisclaimercondition {
+    width: 40%;
+  }
+
+  .footerdisclaimercondition a {
+    color: white;
+    text-decoration: none;
+    margin: 0 2%;
+  }
+
+  .footerdisclaimercondition a:hover {
+    color: black;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 609px) and (max-width: 768px) {
+  /************* header section start ***********/
+
+  header {
+    /* border: 2px solid red; */
+    height: 80px;
+  }
+
+  header .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  header img.logo {
+    margin-left: 10%;
+  }
+
+  /********** slider or banner responsive ******/
+
+  .home img {
+    height: 300px;
+  }
+
+  .slider-wrapper {
+    height: 400px;
+  }
+
+  .slider-wrapper img {
+    height: 300px;
+    object-fit: fill;
+    margin-top: 9%;
+  }
+
+  /************** Service section start ************/
+
+  div.services h1 {
+    padding: 30px 0;
+  }
+
+  .servicebox {
+    display: block;
+  }
+
+  .serviceboxes {
+    /* border: 2px solid red; */
+    width: 60%;
+    height: 40vh;
+    border-radius: 10px;
+    margin: 5% 20%;
+  }
+
+  .serviceboxes:hover {
+    transform: scale(1.1);
+  }
+
+  .serviceboxes img {
+    width: 70px;
+    height: 70px;
+    margin-top: 3%;
+    /* border: 2px solid red; */
+  }
+
+  .serviceboxes h2 {
+    font-size: 20px;
+  }
+
+  .services a {
+    text-decoration: none;
+  }
+
+  a.serviceboxesanchor {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    background-color: rgb(124, 124, 214);
+    border-radius: 20px;
+    padding: 5px 25px;
+    margin: 10px 0 0 0;
+    /* border: 2px solid red; */
+  }
+
+  /**************** Investment section start ***********/
+
+  .investment {
+    height: 580px;
+  }
+
+  .investmentsection {
+    display: block;
+    margin-left: 10px;
+  }
+
+  .investmentsectionimg img {
+    margin-top: 10px;
+    margin-left: 20%;
+    width: 280px;
+    height: 230px;
+  }
+
+  .investmentsectioncontent {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  .investmentsectioncontent h2 {
+    font-size: 30px;
+  }
+
+  .investmentsectioncontent h5 {
+    font-size: 16px;
+  }
+
+  .investmentsectioncontent h5 span {
+    font-size: 16px;
+  }
+
+  .investmentpoints {
+    /* border: 2px solid red; */
+    margin: 15px 0;
+  }
+
+  .investmentpoints p {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .investmentpoints i {
+    margin: 0 5px 0 0;
+  }
+
+  .investmentsectioncontent a {
+    padding: 0px 10px;
+    border-radius: 10px;
+  }
+
+  /*************** INSURANCE Section Start ************/
+
+  .insurance {
+    margin: 20px 0 0 10px;
+    /* border: 2px solid red; */
+  }
+
+  .insurancesection {
+    display: block;
+  }
+
+  .insurancesectionimg img {
+    margin: 0 0 0 25%;
+  }
+
+  .insurancesectioncontent {
+    width: 100%;
+  }
+
+  .insurancesectioncontent h2 {
+    margin-top: 10px;
+    font-size: 30px;
+    /* border: 2px solid red; */
+  }
+
+  .insurancesectioncontent h5 {
+    font-size: 18px;
+  }
+
+  .insurancesectioncontent h5 span {
+    font-size: 18px;
+  }
+
+  .insurancepoints {
+    /* border: 2px solid red; */
+    margin: 20px 0;
+  }
+
+  .insurancepoints p {
+    font-size: 16px;
+  }
+
+  .insurancepoints i {
+    color: rgb(124, 124, 214);
+    margin: 0 5px 0 0;
+  }
+
+  .insurancesectioncontent a {
+    padding: 0px 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+  }
+
+  .insurancesectionimg img {
+    width: 150px;
+    height: 250px;
+  }
+
+  .insuranceblock {
+    /* display: block; */
+    margin: 20px 0 50px 0;
+    /* border: 2px solid red; */
+  }
+
+  .insuranceblockbox {
+    width: 50%;
+    height: 35vh;
+    border-radius: 10px;
+    margin: 15px 10px;
+    /* border: 2px solid red; */
+  }
+
+  .insuranceblockbox img {
+    width: 50px;
+    height: 50px;
+    margin-top: 5%;
+  }
+
+  .insuranceblockbox h2 {
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+  }
+
+  .insuranceblockbox p {
+    width: 100%;
+    font-size: 14px;
+    margin: 10px 0 0 0;
+  }
+
+  /************** Business section start **********/
+
+  .businesscalculation {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+
+  .businesscalculationbox h2 {
+    font-weight: normal;
+    font-size: 20px;
+    margin-left: 10%;
+  }
+
+  .businesscalculationbox h2 span {
+    color: rgb(124, 124, 214);
+  }
+
+  .businesscalculationbox p {
+    font-size: 12px;
+    width: 90%;
+    /* border: 2px solid red; */
+    margin: 2%;
+  }
+
+  /***************** Footer section start **************/
+
+  .footerlogosectionpara img.logo {
+    /* width: 200px; */
+    height: 60px;
+    border-radius: 0;
+    margin: -180px 0 10% -20%;
+  }
+
+  .footerlogosectionpara {
+    width: 30%;
+    margin-left: 1%;
+  }
+
+  .footerlogosectionpara p {
+    font-size: 8px;
+  }
+
+  .footerlogosection {
+    position: absolute;
+    /* border: 2px solid red; */
+    margin: 10% 0 0 30%;
+    width: 40%;
+  }
+
+  .footerlogosection p {
+    font-size: 16px;
+  }
+
+  .footerlogosection img {
+    width: 90px;
+    height: 30px;
+  }
+
+  .footerlogosection span {
+    color: rgb(124, 124, 214);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5% 0;
+  }
+
+  .footerlogosectionconnection {
+    font-size: 16px;
+    width: 40%;
+    margin-left: 5%;
+    /* border: 2px solid red; */
+  }
+
+  .footerlogosectionconnection i {
+    margin: 0 5%;
+    color: black;
+  }
+
+  .footerlogosectionconnection i:hover {
+    color: rgb(124, 124, 214);
+    transition: all 0.3s ease;
+    transform: translateY(-3px);
+  }
+
+  .footerservicesection {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    margin-top: -16%;
+  }
+
+  .footerservicesection h4 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .footerservicesection a {
+    font-size: 10px;
+    /* border: 2px solid red; */
+    width: 160px;
+    line-height: 1.5rem;
+  }
+
+  .footerservicesectionsecond {
+    display: flex;
+    flex-direction: column;
+    margin: -32% 1% 0 2%;
+  }
+
+  #footercompany {
+    margin-top: -35%;
+  }
+
+  .footerservicesectionsecond h4 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .footerservicesectionsecond a {
+    font-size: 10px;
+    width: 100px;
+    line-height: 1.5rem;
+  }
+
+  .footerdisclaimercopy {
+    margin-top: 1%;
+  }
+
+  .footerdisclaimercondition {
+    width: 40%;
+  }
+
+  .footerdisclaimercondition a {
+    color: white;
+    text-decoration: none;
+    margin: 0 2%;
+  }
+
+  .footerdisclaimercondition a:hover {
+    color: black;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+  /************* header section start ***********/
+
+  header {
+    /* border: 2px solid red; */
+    height: 80px;
+  }
+
+  header .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  header img.logo {
+    margin-left: 10%;
+  }
+
+  /********** slider or banner responsive ******/
+
+  .home img {
+    height: 300px;
+  }
+
+  .slider-wrapper {
+    height: 400px;
+  }
+
+  .slider-wrapper img {
+    height: 350px;
+    object-fit: fill;
+    margin-top: 5.7%;
+  }
+
+  /************** Service section start ************/
+
+  .serviceboxes {
+    width: 90%;
+    height: 30vh;
+    border-radius: 10px;
+    margin: 0 10px;
+    /* border: 2px solid red; */
+  }
+
+  .serviceboxes:hover {
+    transform: scale(1.1);
+  }
+
+  .serviceboxes img {
+    width: 70px;
+    height: 70px;
+    margin-top: 8%;
+    /* border: 2px solid red; */
+  }
+
+  .serviceboxes h2 {
+    margin: 30px 0 0 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color:  rgb(42, 42, 113);
+  }
+
+  .serviceboxes h3 {
+    color: rgb(185, 4, 4);
+    font-size: 20px;
+  }
+
+  a.serviceboxesanchor {
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 5px 20px;
+    /* border: 2px solid red; */
+  }
+
+  /*************************** Investment Section  ******************/
+
+  .investmentsectionimg img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .investmentsectioncontent {
+    width: 40%;
+    margin-left: 50px;
+  }
+
+  .investmentsectioncontent h2 {
+    font-size: 30px;
+  }
+
+  .investmentsectioncontent h5 {
+    font-size: 20px;
+  }
+
+  .investmentpoints p {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  /*************************** Insurance Section  ******************/
+
+  .insurancesectionimg img {
+    margin: 0 0 0 60px;
+  }
+
+  .insurancesectioncontent {
+    width: 50%;
+  }
+
+  .insurancesectioncontent h2 {
+    font-size: 30px;
+  }
+
+  .insurancesectioncontent h5 {
+    font-size: 20px;
+  }
+
+  .insurancesectioncontent h5 span {
+    font-size: 23px;
+  }
+
+  .insurancepoints p {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .insuranceblock {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 50px 0;
+  }
+
+  .insuranceblockbox {
+    margin: 0 10px;
+    /* border: 2px solid  red; */
+    height: 35vh;
+  }
+
+  .insuranceblockbox img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .insuranceblockbox h2 {
+    font-size: 20px;
+  }
+
+  .insuranceblockbox p {
+    font-size: 16px;
+    margin: 10px 0 0 0;
+  }
+
+  /*************************** Business Section Start ********************/
+
+  .businesscalculation {
+    /* border: 2px solid red; */
+    margin: 20px;
+  }
+
+  .businesscalculationbox h2 {
+    font-weight: bold;
+    margin-left: 30%;
+  }
+
+  .businesscalculationbox p {
+    font-size: 16px;
+    margin-top: 10%;
+  }
+
+  /***************** Footer section start **************/
+
+  .footerlogosectionpara img.logo {
+    /* width: 50px; */
+    height: 70px;
+    border-radius: 0%;
+    margin: -180px 0 10% -20%;
+  }
+
+  .footerlogosectionpara {
+    width: 30%;
+    margin-left: 1%;
+  }
+
+  .footerlogosectionpara p {
+    font-size: 8px;
+  }
+
+  .footerlogosection {
+    position: absolute;
+    /* border: 2px solid red; */
+    margin: 10% 0 0 30%;
+    width: 40%;
+  }
+
+  .footerlogosection p {
+    font-size: 16px;
+  }
+
+  .footerlogosection img {
+    width: 90px;
+    height: 30px;
+  }
+
+  .footerlogosection span {
+    color: rgb(124, 124, 214);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5% 0;
+  }
+
+  .footerlogosectionconnection {
+    font-size: 16px;
+    width: 40%;
+    margin-left: 5%;
+    /* border: 2px solid red; */
+  }
+
+  .footerlogosectionconnection i {
+    margin: 0 5%;
+    color: black;
+  }
+
+  .footerlogosectionconnection i:hover {
+    color: rgb(124, 124, 214);
+    transition: all 0.3s ease;
+    transform: translateY(-3px);
+  }
+
+  .footerservicesection {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    margin-top: -10%;
+  }
+
+  .footerservicesection h4 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .footerservicesection a {
+    font-size: 10px;
+    /* border: 2px solid red; */
+    width: 160px;
+    line-height: 1.5rem;
+  }
+
+  .footerservicesectionsecond {
+    display: flex;
+    flex-direction: column;
+    margin: -23% 1% 0 2%;
+  }
+
+  #footercompany {
+    margin-top: -26%;
+  }
+
+  .footerservicesectionsecond h4 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .footerservicesectionsecond a {
+    font-size: 10px;
+    width: 100px;
+    line-height: 1.5rem;
+  }
+
+  .footerdisclaimercopy {
+    margin-top: 1%;
+  }
+
+  .footerdisclaimercondition {
+    width: 40%;
+  }
+
+  .footerdisclaimercondition a {
+    color: white;
+    text-decoration: none;
+    margin: 0 2%;
+  }
+
+  .footerdisclaimercondition a:hover {
+    color: black;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px) {
+  .serviceboxes {
+    width: 90%;
+    height: 30vh;
+    border-radius: 10px;
+    margin: 0 10px;
+    /* border: 2px solid red; */
+  }
+
+  .serviceboxes:hover {
+    transform: scale(1.1);
+  }
+
+  .serviceboxes img {
+    width: 70px;
+    height: 70px;
+    margin-top: 5%;
+    /* border: 2px solid red; */
+  }
+
+  .serviceboxes h2 {
+    margin: 20px 0 0 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color:  rgb(42, 42, 113);
+  }
+
+  .serviceboxes h3 {
+    color: rgb(185, 4, 4);
+    font-size: 20px;
+  }
+
+  a.serviceboxesanchor {
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 5px 20px;
+    /* border: 2px solid red; */
+  }
+
+  .investmentsectionimg img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .insuranceblock {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 50px 0;
+  }
+
+  .insuranceblockbox {
+    margin: 0 10px;
+  }
+
+  .insuranceblockbox img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .insuranceblockbox h2 {
+    font-size: 20px;
+  }
+
+  .insuranceblockbox p {
+    font-size: 16px;
+    margin: 10px 0 0 0;
+  }
+
+  /* FOOTER SECTION START */
+
+  .footerlogosectionpara img.logo {
+    /* width: 80px; */
+    height: 100px;
+    border-radius: 0%;
+    margin: -100px 0 10% -20%;
+  }
+
+  .footerlogosectionpara {
+    width: 30%;
+    margin-left: 1%;
+  }
+
+  .footerlogosectionpara p {
+    font-size: 14px;
+  }
+
+  .footerlogosection {
+    position: absolute;
+    /* border: 2px solid red; */
+    margin: 10% 0 0 30%;
+    width: 40%;
+  }
+
+  .footerlogosection p {
+    font-size: 16px;
+  }
+
+  .footerlogosection img {
+    width: 90px;
+    height: 30px;
+  }
+
+  .footerlogosection span {
+    color: rgb(124, 124, 214);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5% 0 1% 0;
+  }
+
+  .footerlogosectionconnection {
+    font-size: 20px;
+    width: 40%;
+    margin-left: 15%;
+    /* border: 2px solid red; */
+  }
+
+  .footerlogosectionconnection i {
+    margin: 0 5%;
+    color: black;
+  }
+
+  .footerlogosectionconnection i:hover {
+    color: rgb(124, 124, 214);
+    transition: all 0.3s ease;
+    transform: translateY(-3px);
+  }
+
+  .footerservicesection {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    margin-top: -10%;
+  }
+
+  .footerservicesection h4 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .footerservicesection a {
+    font-size: 10px;
+    /* border: 2px solid red; */
+    width: 160px;
+    line-height: 1.5rem;
+  }
+
+  .footerservicesectionsecond {
+    display: flex;
+    flex-direction: column;
+    margin: -21% 1% 0 2%;
+  }
+
+  #footercompany {
+    margin-top: -23%;
+  }
+
+  .footerservicesectionsecond h4 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .footerservicesectionsecond a {
+    font-size: 10px;
+    width: 100px;
+    line-height: 1.5rem;
+  }
+
+  .footerdisclaimercopy {
+    margin-top: 1%;
+  }
+
+  .footerdisclaimercondition {
+    width: 40%;
+  }
+
+  .footerdisclaimercondition a {
+    color: white;
+    text-decoration: none;
+    margin: 0 2%;
+  }
+
+  .footerdisclaimercondition a:hover {
+    color: black;
+    font-weight: bold;
+  }
+}
+
+/************************* Payment Section start responsive **************/
+
+@media screen and (min-width: 350px) and (max-width: 400px) {
+  .paymentsContainer {
+    /* border: 2px solid red; */
+    width: 90%;
+    box-shadow: 2px 5px 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: block;
+    margin: 5% 5%;
+    height: 53vh;
+  }
+
+  .paymentsectionfirstimg {
+    display: none;
+  }
+
+  .paymentbill {
+    padding: 5px;
+  }
+
+  .paymentbill h2 {
+    font-size: 18px;
+    margin: 5% 0;
+  }
+
+  .paymentbill h5 {
+    font-size: 14px;
+    margin: 3% 0;
+  }
+
+  .paymentbillpoint p {
+    font-size: 12px;
+  }
+
+  .paymentbillpoint p i {
+    color: rgb(124, 124, 214);
+    margin-right: 3%;
+  }
+
+  .paymentmiddlecontent h2 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .paymentsContainersecond {
+    /* border: 2px solid red; */
+    width: 90%;
+    box-shadow: 2px 5px 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: block;
+    margin: 5% 5%;
+  }
+
+  .paymentsectionsecondimg img {
+    display: none;
+  }
+
+  .paymentbillsecond {
+    /* border: 2px solid red; */
+    padding: 10px;
+  }
+
+  .paymentbillsecond h2 {
+    font-size: 20px;
+  }
+
+  .paymentbillsecond h5 {
+    font-size: 18px;
+  }
+
+  .paymentbillpointsecond p {
+    font-size: 14px;
+  }
+
+  .paymentbillsecond p i {
+    color: rgb(124, 124, 214);
+    margin-right: 3%;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 609px) {
+  .paymentsContainer {
+    /* border: 2px solid red; */
+    width: 90%;
+    box-shadow: 2px 5px 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: block;
+    margin: 5% 5%;
+    height: 53vh;
+  }
+
+  .paymentsectionfirstimg {
+    display: none;
+  }
+
+  .paymentbill {
+    padding: 5px;
+  }
+
+  .paymentbill h2 {
+    font-size: 18px;
+  }
+
+  .paymentbill h5 {
+    font-size: 16px;
+    margin: 3% 0;
+  }
+
+  .paymentbillpoint p {
+    font-size: 12px;
+  }
+
+  .paymentbillpoint p i {
+    color: rgb(124, 124, 214);
+    margin-right: 3%;
+  }
+
+  .paymentmiddlecontent h2 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .paymentsContainersecond {
+    /* border: 2px solid red; */
+    width: 90%;
+    box-shadow: 2px 5px 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: block;
+    margin: 5% 5%;
+  }
+
+  .paymentsectionsecondimg img {
+    display: none;
+  }
+
+  .paymentbillsecond {
+    /* border: 2px solid red; */
+    padding: 10px;
+  }
+
+  .paymentbillsecond h2 {
+    font-size: 18px;
+  }
+
+  .paymentbillsecond h5 {
+    font-size: 16px;
+  }
+
+  .paymentbillpointsecond p {
+    font-size: 12px;
+  }
+
+  .paymentbillsecond p i {
+    color: rgb(124, 124, 214);
+    margin-right: 3%;
+  }
+}
+
+@media screen and (min-width: 609px) and (max-width: 768px) {
+  .paymentsContainer {
+    /* border: 2px solid red; */
+    width: 90%;
+    box-shadow: 2px 5px 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: block;
+    margin: 5% 5%;
+    height: 53vh;
+  }
+
+  .paymentsectionfirstimg {
+    display: none;
+  }
+
+  .paymentbill {
+    padding: 5px;
+  }
+
+  .paymentbill h2 {
+    font-size: 22px;
+  }
+
+  .paymentbill h5 {
+    font-size: 18px;
+    margin: 3% 0;
+  }
+
+  .paymentbillpoint p {
+    font-size: 14px;
+  }
+
+  .paymentbillpoint p i {
+    color: rgb(124, 124, 214);
+    margin-right: 3%;
+  }
+
+  .paymentmiddlecontent h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .paymentsContainersecond {
+    /* border: 2px solid red; */
+    width: 90%;
+    box-shadow: 2px 5px 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: block;
+    margin: 5% 5%;
+  }
+
+  .paymentsectionsecondimg img {
+    display: none;
+  }
+
+  .paymentmiddlecontent h2 {
+    font-size: 35px;
+  }
+
+  .paymentbillsecond {
+    /* border: 2px solid red; */
+    padding: 10px;
+  }
+
+  .paymentbillsecond h2 {
+    font-size: 22px;
+  }
+
+  .paymentbillsecond h5 {
+    font-size: 18px;
+  }
+
+  .paymentbillpointsecond p {
+    font-size: 14px;
+  }
+
+  .paymentbillsecond p i {
+    color: rgb(124, 124, 214);
+    margin-right: 3%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .paymentsContainer {
+    margin: 5% 10%;
+  }
+
+  .paymentsectionfirstimg {
+    margin: 0 2%;
+    height: 100%;
+  }
+
+  .paymentsectionfirstimg img {
+    width: 200px;
+    height: 230px;
+  }
+
+  .paymentbill {
+    /* border: 2px solid red; */
+    margin: 0 1%;
+    padding: 10px;
+  }
+
+  .paymentbill h2 {
+    font-size: 25px;
+  }
+
+  .paymentbill h5 {
+    font-size: 18px;
+  }
+
+  .paymentbillpoint p {
+    font-size: 16px;
+  }
+
+  .paymentmiddlecontent h2 {
+    font-size: 40px;
+  }
+
+  .paymentsContainersecond {
+    /* border: 2px solid red; */
+    margin: 5% 10%;
+  }
+
+  .paymentsectionsecondimg img {
+    width: 230px;
+    height: 230px;
+  }
+
+  .paymentbillsecond {
+    /* border: 2px solid red; */
+    margin: 0 5%;
+  }
+
+  .paymentbillsecond h2 {
+    font-size: 25px;
+  }
+
+  .paymentbillsecond h5 {
+    font-size: 18px;
+  }
+
+  .paymentbillsecond p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px) {
+  .paymentsContainer {
+    margin: 5% 10%;
+  }
+
+  .paymentsectionfirstimg {
+    margin: 0 2%;
+    height: 100%;
+  }
+
+  .paymentsectionfirstimg img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .paymentbill {
+    /* border: 2px solid red; */
+    margin: 0 1%;
+    padding: 10px;
+  }
+
+  .paymentbill h2 {
+    font-size: 30px;
+  }
+
+  .paymentbill h5 {
+    font-size: 20px;
+  }
+
+  .paymentbillpoint p {
+    font-size: 18px;
+  }
+
+  .paymentmiddlecontent h2 {
+    font-size: 45px;
+  }
+
+  .paymentsContainersecond {
+    /* border: 2px solid red; */
+    margin: 5% 10%;
+  }
+
+  .paymentsectionsecondimg img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .paymentbillsecond {
+    /* border: 2px solid red; */
+    margin: 0 5%;
+  }
+
+  .paymentbillsecond h2 {
+    font-size: 30px;
+  }
+
+  .paymentbillsecond h5 {
+    font-size: 20px;
+  }
+
+  .paymentbillsecond p {
+    font-size: 18px;
+  }
+}
+
+/*************************** INVESTMENT / INSURANCE RESPONSIVE PAGE ********************/
+
+@media screen and (min-width: 350px) and (max-width: 400px) {
+  .investsectionfirstimg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .investsectionfirstimg img {
+    width: 150px;
+    height: 150px;
+    margin-top: 5%;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 609px) {
+  .investsectionfirstimg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .investsectionfirstimg img {
+    width: 150px;
+    height: 150px;
+    margin-top: 5%;
+  }
+}
+
+@media screen and (min-width: 609px) and (max-width: 768px) {
+  .investsectionfirstimg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .investsectionfirstimg img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .investsectionfirstimg img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/************************ RECHARGE AND BILL PAYMENT RESPONSIVE PAGE *******************/
+
+@media screen and (min-width: 350px) and (max-width: 400px) {
+  .rechargecontent {
+    display: block;
+  }
+
+  .rechargemainimg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rechargemainimg img {
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .rechargemaincontent {
+    /* border: 2px solid red; */
+    width: 100%;
+  }
+
+  .rechargemaincontent h1 {
+    font-size: 20px;
+  }
+
+  .rechargemaincontent p {
+    font-size: 14px;
+  }
+
+  .rechargefeature h1 {
+    font-size: 18px;
+    /* border: 2px solid red; */
+  }
+
+  .rechargeretailerfeedback h1 {
+    font-size: 20px;
+  }
+
+  .reviewcustomer {
+    width: 100%;
+  }
+
+  .reviewcustomer .retailerpic img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .retailerpic h3 {
+    font-size: 18px;
+  }
+
+  .retailerpic h4 {
+    font-size: 16px;
+  }
+
+  .retailerpic p {
+    font-size: 12px;
+  }
+
+  .rechargefaq {
+    border-radius: 15px;
+    margin: 5%;
+  }
+
+  .rechargefaq details {
+    margin: 2% 5%;
+    /* border: 2px solid red; */
+  }
+
+  .rechargefaq h1 {
+    font-size: 3.2vw;
+    margin: 2% 5%;
+  }
+
+  .rechargefaq summary {
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  .rechargefaq p {
+    font-size: 12px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 609px) {
+  .rechargecontent {
+    display: block;
+  }
+
+  .rechargemainimg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rechargemainimg img {
+    width: 350px;
+    height: 220px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .rechargemaincontent {
+    /* border: 2px solid red; */
+    width: 100%;
+  }
+
+  .rechargemaincontent h1 {
+    font-size: 20px;
+  }
+
+  .rechargemaincontent p {
+    font-size: 14px;
+  }
+
+  .rechargefeature h1 {
+    font-size: 20px;
+  }
+
+  .rechargeretailerfeedback h1 {
+    font-size: 20px;
+  }
+
+  .reviewcustomer {
+    width: 100%;
+  }
+
+  .reviewcustomer .retailerpic img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .retailerpic h3 {
+    font-size: 18px;
+  }
+
+  .retailerpic h4 {
+    font-size: 16px;
+  }
+
+  .retailerpic p {
+    font-size: 12px;
+  }
+
+  .rechargefaq {
+    border-radius: 15px;
+    margin: 5%;
+  }
+
+  .rechargefaq details {
+    margin: 2% 5%;
+    /* border: 2px solid red; */
+  }
+
+  .rechargefaq h1 {
+    font-size: 3.7vw;
+    margin: 2% 5%;
+  }
+
+  .rechargefaq summary {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .rechargefaq p {
+    font-size: 12px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 609px) and (max-width: 768px) {
+  .rechargemainimg img {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+  }
+
+  .rechargemaincontent {
+    /* border: 2px solid red; */
+    width: 50%;
+  }
+
+  .rechargemaincontent h1 {
+    font-size: 25px;
+  }
+
+  .rechargemaincontent p {
+    font-size: 14px;
+  }
+
+  .rechargefeature h1 {
+    font-size: 25px;
+  }
+
+  .rechargeretailerfeedback h1 {
+    font-size: 25px;
+  }
+
+  .reviewcustomer {
+    width: 100%;
+  }
+
+  .reviewcustomer .retailerpic img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .retailerpic h3 {
+    font-size: 20px;
+  }
+
+  .retailerpic h4 {
+    font-size: 18px;
+  }
+
+  .retailerpic p {
+    font-size: 14px;
+  }
+
+  .rechargefaq {
+    border-radius: 15px;
+  }
+
+  .rechargefaq details {
+    margin: 2% 5%;
+    /* border: 2px solid red; */
+  }
+
+  .rechargefaq h1 {
+    font-size: 4vw;
+    margin: 2% 5%;
+  }
+
+  .rechargefaq summary {
+    font-size: 16px;
+  }
+
+  .rechargefaq p {
+    font-size: 12px;
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .rechargemainimg img {
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+  }
+
+  .rechargemaincontent {
+    /* border: 2px solid red; */
+    width: 50%;
+  }
+
+  .rechargemaincontent h1 {
+    font-size: 30px;
+  }
+
+  .rechargemaincontent p {
+    font-size: 14px;
+  }
+
+  .rechargefeature h1 {
+    font-size: 30px;
+  }
+
+  .rechargeretailerfeedback h1 {
+    font-size: 25px;
+  }
+
+  .reviewcustomer {
+    width: 100%;
+  }
+
+  .reviewcustomer .retailerpic img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .retailerpic h3 {
+    font-size: 20px;
+  }
+
+  .retailerpic h4 {
+    font-size: 18px;
+  }
+
+  .retailerpic p {
+    font-size: 14px;
+  }
+
+  .rechargefaq {
+    border-radius: 15px;
+  }
+
+  .rechargefaq details {
+    margin: 2% 5%;
+    /* border: 2px solid red; */
+  }
+
+  .rechargefaq h1 {
+    font-size: 4vw;
+    margin: 2% 5%;
+  }
+
+  .rechargefaq summary {
+    font-size: 16px;
+  }
+
+  .rechargefaq p {
+    font-size: 12px;
+  }
+}
+
+/********************* ABOUT RESPONSIVE PAGE **************/
+
+@media screen and (min-width: 350px) and (max-width: 400px) {
+  .businesscontentbox {
+    display: block;
+    width: 80%;
+  }
+
+  .businessboxcontent {
+    margin-left: -15%;
+  }
+
+  .fa-shuffle:before,
+  .fa-note-sticky:before {
+    margin-left: -70%;
+  }
+
+  .businessboxcontent p {
+    width: 230px;
+  }
+
+  .businesscontentboxsecond {
+    display: block;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .businessbox1 i {
+    /* border: 2px solid red; */
+    font-size: 40px;
+  }
+
+  .businessboxcontentsecond {
+    margin-left: 10%;
+  }
+
+  .businessbox2 {
+    margin-left: 10%;
+  }
+
+  .businessboxcontentsecond h1 {
+    font-size: 25px;
+  }
+
+  .businessbox2 i.box1 {
+    font-size: 40px;
+  }
+
+  .businessbox2 i {
+    /* border: 2px solid red; */
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 609px) {
+  .businessboxcontent h1 {
+    font-size: 25px;
+  }
+
+  .businessboxcontent p {
+    width: 170px;
+  }
+
+  .businessbox1 i.box1 {
+    font-size: 40px;
+    height: 50%;
+    margin: 15% 10%;
+  }
+
+  .businessbox1 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-right: 5%;
+  }
+
+  .businesscontentboxsecond {
+    display: block;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .businessbox1 i {
+    /* border: 2px solid red; */
+    font-size: 40px;
+  }
+
+  .businessboxcontentsecond {
+    margin-left: 10%;
+  }
+
+  .businessbox2 {
+    margin-left: 10%;
+  }
+
+  .businessboxcontentsecond h1 {
+    font-size: 25px;
+  }
+
+  .businessbox2 i.box1 {
+    font-size: 40px;
+  }
+
+  .businessbox2 i {
+    /* border: 2px solid red; */
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 610px) and (max-width: 768px) {
+  .businessboxcontent h1 {
+    font-size: 22px;
+  }
+
+  .businessboxcontent p {
+    width: 200px;
+  }
+
+  .businessbox1 i.box1 {
+    font-size: 40px;
+    height: 50%;
+    margin: 15% 10%;
+  }
+
+  .businessbox1 i {
+    /* border: 2px solid red; */
+    font-size: 40px;
+  }
+
+  .businessboxcontentsecond {
+    margin-left: 10%;
+  }
+
+  .businessbox2 {
+    margin-left: -1%;
+    margin-right: 5%;
+  }
+
+  .businessboxcontentsecond h1 {
+    font-size: 25px;
+  }
+
+  .businessbox2 i.box1 {
+    font-size: 40px;
+  }
+
+  .businessbox2 i {
+    /* border: 2px solid red; */
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .businessboxcontent h1 {
+    font-size: 25px;
+  }
+
+  .businessboxcontent p {
+    width: 250px;
+  }
+
+  .businessbox1 i.box1 {
+    font-size: 40px;
+    height: 50%;
+    margin: 15% 10%;
+  }
+
+  .businessbox1 i {
+    /* border: 2px solid red; */
+    font-size: 40px;
+  }
+
+  .businessboxcontentsecond {
+    margin-left: 10%;
+  }
+
+  .businessbox2 {
+    margin-left: -1%;
+    margin-right: 5%;
+  }
+
+  .businessboxcontentsecond h1 {
+    font-size: 25px;
+  }
+
+  .businessbox2 i.box1 {
+    font-size: 40px;
+  }
+
+  .businessbox2 i {
+    /* border: 2px solid red; */
+    font-size: 40px;
+  }
+}
+
+/********************* CONTACT PAGE RESPONSIVE ***************/
+
+@media screen and (min-width: 350px) and (max-width: 400px) {
+  img.contactbgimg {
+    display: none;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .contactaddresscontent {
+    /* border: 2px solid red; */
+    margin-top: 5%;
+    width: 100%;
+  }
+
+  .contactcontact i {
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  .contacthead h3 {
+    font-weight: bold;
+    margin: 3% 0;
+    font-size: 16px;
+  }
+
+  .contacthead h5 {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .contactaddressimg img {
+    display: none;
+  }
+
+  .contactmapaddress {
+    padding: 2px;
+  }
+
+  .contactmapaddress i {
+    font-size: 20px;
+  }
+
+  .contactmapaddress h2 {
+    font-size: 14px;
+  }
+
+  .contactmapaddress h5 {
+    font-size: 12px;
+  }
+
+  .contactmapaddress button {
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 609px) {
+  img.contactbgimg {
+    display: none;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  .contactaddresscontent {
+    /* border: 2px solid red; */
+    margin-top: 5%;
+    width: 100%;
+  }
+
+  .contactcontact i {
+    font-size: 25px;
+    padding: 40px;
+    color: rgb(128, 0, 255);
+  }
+
+  .contacthead h3 {
+    font-weight: bold;
+    margin: 3% 0;
+    font-size: 20px;
+  }
+
+  .contacthead h5 {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .contactaddressimg img {
+    display: none;
+  }
+
+  .contactmapaddress {
+    padding: 5px;
+  }
+
+  .contactmapaddress i {
+    font-size: 25px;
+  }
+
+  .contactmapaddress h2 {
+    font-size: 16px;
+  }
+
+  .contactmapaddress h5 {
+    font-size: 14px;
+  }
+
+  .contactmapaddress button {
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 609px) and (max-width: 768px) {
+  img.contactbgimg {
+    display: none;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  .contactaddresscontent {
+    /* border: 2px solid red; */
+    margin-top: 5%;
+    width: 70%;
+  }
+
+  .contactcontact i {
+    font-size: 25px;
+    padding: 40px;
+    color: rgb(128, 0, 255);
+  }
+
+  .contacthead h3 {
+    font-weight: bold;
+    margin: 3% 0;
+    font-size: 20px;
+  }
+
+  .contacthead h5 {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .contactaddressimg img {
+    width: 100%;
+    height: 60vh;
+    margin-left: 40px;
+  }
+
+  .contactmapaddress i {
+    font-size: 30px;
+  }
+
+  .contactmapaddress h2 {
+    font-size: 22px;
+  }
+
+  .contactmapaddress h5 {
+    color: grey;
+    font-size: 18px;
+  }
+
+  .contactmapaddress button {
+    padding: 5px 20px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  img.contactbgimg {
+    display: none;
+  }
+
+  .contactaddresscontent {
+    /* border: 2px solid red; */
+    margin-top: 5%;
+    width: 70%;
+  }
+
+  .contactcontact i {
+    font-size: 25px;
+    padding: 40px;
+    color: rgb(128, 0, 255);
+  }
+
+  .contacthead h3 {
+    font-weight: bold;
+    margin: 3% 0;
+    font-size: 20px;
+  }
+
+  .contacthead h5 {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .contactaddressimg img {
+    width: 100%;
+    height: 60vh;
+    margin-left: 40px;
+  }
+
+  .contactmapaddress i {
+    font-size: 30px;
+  }
+
+  .contactmapaddress h2 {
+    font-size: 22px;
+  }
+
+  .contactmapaddress h5 {
+    color: grey;
+    font-size: 18px;
+  }
+
+  .contactmapaddress button {
+    padding: 5px 20px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1300px) {
+  img.contactbgimg {
+    display: none;
+  }
+
+  .contactaddresscontent {
+    /* border: 2px solid red; */
+    margin-top: 5%;
+    width: 70%;
+  }
+
+  .contactcontact i {
+    font-size: 30px;
+    padding: 40px;
+    color: rgb(128, 0, 255);
+  }
+
+  .contacthead h3 {
+    font-weight: bold;
+    margin: 3% 0;
+    font-size: 25px;
+  }
+
+  .contacthead h5 {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .contactaddressimg img {
+    width: 100%;
+    height: 60vh;
+    margin-left: 40px;
+  }
+
+  .contactmapaddress i {
+    font-size: 30px;
+  }
+
+  .contactmapaddress h2 {
+    font-size: 25px;
+  }
+
+  .contactmapaddress h5 {
+    color: grey;
+    font-size: 20px;
+  }
+
+  .contactmapaddress button {
+    padding: 7px 20px;
+    border-radius: 10px;
+  }
+}
